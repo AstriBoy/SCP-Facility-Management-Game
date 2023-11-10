@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://pbs.twimg.com/media/EitmYZFX0AMwCHH?format=jpg&name=4096x4096'); /* Aggiungi lo sfondo desiderato */
+            background-size: cover; /* Scala lo sfondo per coprire l'intera pagina */
+            min-height: 100vh; /* Imposta l'altezza minima del body al 100% della viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+      
+        .navbar {
+            background-color: #000; /* Colore della barra nera */
+            color: #fff; /* Colore del testo */
+            text-align: center; /* Centra il testo orizzontalmente */
+            padding: 10px;
+            width: 100%; /* Occupa l'intera larghezza della pagina */
+        }
+
+        .navbar a {
+            color: #fff; /* Colore dei link del menu */
+            margin: 0 10px; /* Spazio tra i link del menu */
+            text-decoration: none;
+        }
+
+        .profile-container {
+            background: rgba(0, 0, 0, 0.5); /* Sfondo con trasparenza */
+            border: 1px solid #fff; /* Bordo bianco per delimitare il riquadro */
+            color: #fff; /* Colore del testo */
+            text-align: center;
+            padding: 80px;
+            margin: 40px;
+            max-width: 200px; /* Larghezza massima del riquadro */
+        }
+
+        .profile-wrapper {
+            text-align: center;
+        }
+
+        .profile-image img {
+            width: 100px; /* Larghezza dell'immagine del profilo */
+            height: 100px; /* Altezza dell'immagine del profilo */
+            border: 2px solid #000; /* Aggiungi una cornice di 2px nera attorno all'immagine */
+            border-radius: 50%; /* Arrotonda gli angoli per creare una cornice circolare */
+        }
+
+        .username {
+            font-size: 24px; /* Dimensione del testo del nome utente */
+            font-weight: bold; /* Stile del testo del nome utente */
+            margin: 10px 0;
+        }
+
+        .bio {
+            font-size: 16px; /* Dimensione del testo della bio */
+        }
+
+        .bio-edit {
+            display: none;
+            margin: 10px 0;
+        }
+
+        .edit-button {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .edit-input {
+            width: 100%;
+        }
+
+        .footer {
+            background-color: #000; /* Colore della barra nera del footer */
+            color: #fff; /* Colore del testo del footer */
+            text-align: center;
+            padding: 10px;
+            position: absolute; /* Posiziona il footer in fondo alla pagina */
+            bottom: 0; /* Fissa il footer al fondo */
+            width: 100%; /* Estende il footer su tutta la larghezza */
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="First_page.html">Home</a>
+        <a href="about.html">About the game</a>
+        <a href="library.html">Library</a>
+        <a href="encyclopedia.html">Encyclopedia</a>
+        <a href="login.html">Exit the game</a>
+    </div>
+
+    <!-- ... (codice precedente) ... -->
+
+    <div class="profile-container">
+     <div class="profile-wrapper">
+        <div class="profile-image">
+            <img src="immagine_profilo_server.jpg" alt="Immagine del Profilo">
+        </div>
+        <div class="username">
+            username
+        </div>
+        <div class="bio">
+            Here is your Bio.
+            <span class="edit-button">Edit</span>
+        </div>
+        <div class="bio-edit">
+            <input class="edit-input" type="text" id="bio-text">
+            <button id="save-bio-button">Confirm</button>
+        </div>
+        <a href="modifica_profilo.html"><button>Edit Profile</button></a>
+     </div>
+    </div>
+
+    <script>
+        
+        const editBioButton = document.querySelector('.edit-bio-button');
+        const bioEdit = document.querySelector('.bio-edit');
+        const bioText = document.getElementById('bio-text');
+        const saveBioButton = document.getElementById('save-bio-button');
+
+        editBioButton.addEventListener('click', () => {
+            bioText.value = document.querySelector('.bio p').textContent.trim();
+            bioEdit.style.display = 'block';
+        });
+
+        saveBioButton.addEventListener('click', () => {
+            const newBio = bioText.value;
+            document.querySelector('.bio p').textContent = newBio;
+            bioEdit.style.display = 'none';
+        });
+      
+    </script>
+  
+    <div class="footer">
+        <div class="footer">
+        <div class="footer-links">
+            <a class="footer-link" href="chat.html">Chat</a>
+            <a class="footer-link" href="magazzino.html">Warehouse</a>
+            <a class="footer-link" href="contabilita.html">Accounting</a>
+        </div>
+    </div>
+</body>
+</html>

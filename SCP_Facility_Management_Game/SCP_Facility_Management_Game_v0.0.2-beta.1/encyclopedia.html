@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encyclopedia</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .navbar {
+            background-color: #333; /* Colore della barra superiore */
+            color: #fff; /* Colore del testo */
+            padding: 10px;
+            position: relative;
+            text-align: center; /* Centra il testo delle news orizzontalmente */
+        }
+
+        .menu-button {
+            position: absolute;
+            left: 20px; /* Posiziona il pulsante a sinistra a circa 20px dal bordo */
+            top: 10;
+            cursor: pointer;
+        }
+
+        .menu-button:hover + .menu,
+        .menu:hover {
+            display: block;
+            position: absolute;
+            top: 0;
+        }
+
+        .menu {
+            background-color: #fff; /* Colore di sfondo del menu a tendina */
+            display: none;
+            position: absolute;
+            top: 100%; /* Allineato sotto il pulsante */
+            left: 0;
+            z-index: 2; /* Imposta la profondità z per sovrapporlo alla barra delle notizie */
+        }
+
+        .menu-item {
+            padding: 10px;
+            text-decoration: none;
+            color: #333; /* Colore del testo del menu a tendina */
+            display: block;
+        }
+
+        .profile-image {
+            position: absolute;
+            right: 20px; /* Posiziona l'immagine a destra a circa 20px dal bordo */
+            top: 10px; /* Posizione verticale centrata */
+            cursor: pointer;
+        }
+
+        .profile-image img {
+            width: 20px; /* Larghezza dell'immagine del profilo */
+            height: 20px; /* Altezza dell'immagine del profilo */
+        }
+
+        .profile-link {
+            display: block;
+            position: absolute;
+            right: 20px; /* Posiziona il link a destra a circa 20px dal bordo */
+            top: 10px; /* Posizione verticale centrata */
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .library-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer {
+            background-color: #000; /* Colore del footer */
+            color: #fff;
+            height: 30px; /* Altezza del footer */
+            position: fixed; /* Ancora il footer in basso */
+            bottom: 0; /* Posiziona il footer in basso */
+            left: 0;
+            right: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .footer-link {
+            color: #fff;
+            text-decoration: none;
+        }
+         
+        .library-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .library-item {
+            text-align: center;
+            margin: 10px;
+        }
+        
+        .library-item img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-wrapper"></div>
+    <div class="navbar">
+        <div class="menu-button">Menu</div>
+        <div class="menu">
+            <a href="First_page.html"class="menu-item">Home</a>
+            <a href="profilo_pubblico.html" class="menu-item">Public Profile</a>
+            <a href="about.html" class="menu-item">About the game</a>
+            <a href="library.html" class="menu-item">Library</a>
+            <a href="encyclopedia.html" class="menu-item">Enciclopedia</a>
+            <a href="login.html" class="menu-item">Exit the game</a>
+        </div>
+        SCP Facility Management
+        <a class="profile-image" href="profilo_pubblico.html">
+            <img src="percorso_immagine_del_profilo.jpg" alt="Immagine del Profilo">
+        </a>
+        
+    </div>
+
+    <div class="content">
+        <h1>Encyclopedia</h1>
+        <!-- Contenuto della libreria -->
+        <p>All the information on SCP are here...</p>
+        <img class="library-image" src="https://assets.stickpng.com/thumbs/621f924f654abf384c30d648.png" alt="Immagine Libro">
+    </div>
+
+    <div class="content">
+        <div class="library-items">
+            <div class="library-item">
+                <a href="link_del_primo_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_secondo_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_terzo_elemento.html">
+                    <img src="percorso_immagine_3.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_quarto_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_quinto_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_sesto_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_settimo_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_ottavo_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_nono_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_decimo_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_primo_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_undicesimo_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_dodicesimo_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_secondo_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_primo_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_secondo_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_primo_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_secondo_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_primo_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_secondo_elemento.html">
+                    <img src="percorso_immagine_2.jpg" alt="Elemento 2">
+                    <p>Nome Elemento 2</p>
+                </a>
+            </div>
+            <div class="library-item">
+                <a href="link_del_primo_elemento.html">
+                    <img src="percorso_immagine_1.jpg" alt="Elemento 1">
+                    <p>Nome Elemento 1</p>
+                </a>
+            </div>
+     <div>
+       
+    <div class="footer">
+        <div class="footer">
+        <div class="footer-links">
+            <a class="footer-link" href="chat.html">Chat</a>
+            <a class="footer-link" href="magazzino.html">Warehouse</a>
+            <a class="footer-link" href="contabilita.html">Accounting</a>
+        </div>
+    </div>
+</body>
+</html>

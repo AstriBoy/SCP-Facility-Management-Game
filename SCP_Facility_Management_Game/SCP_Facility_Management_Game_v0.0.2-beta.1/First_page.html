@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Facility Management</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://i.pinimg.com/originals/45/7d/81/457d81ad24cc2ebe5c9761b9fdeb250b.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: relative;
+            text-align: center;
+        }
+
+        .menu-button {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .menu-button:hover + .menu,
+        .menu:hover {
+            display: block;
+            position: absolute;
+            top: 0;
+        }
+
+        .menu {
+            background-color: #fff;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 2;
+        }
+
+        .menu-item {
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .profile-image {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .profile-image img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .profile-link {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .news-bar {
+            background-color: #FFA500;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .news-text {
+            animation: news-scroll 60s linear infinite;
+        }
+
+        .news-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-text-container {
+            display: inline-block;
+            white-space: nowrap;
+            animation: news-text-scroll 30s linear infinite;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            height: 30px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .footer-link {
+            margin: 0 10px;
+        }
+
+        .footer-link img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .main-content {
+            /* Aggiungi regole di stile per il contenuto principale qui */
+        }
+
+        .collegamento-immagine {
+            position: absolute;
+            left: 20px;
+            top: 100px;
+        }
+
+        .menu-laterale {
+            position: fixed;
+            left: 0;
+            top: 76px;
+            background-color: #333;
+            color: #fff;
+            width: 220px;
+            padding: 30px;
+        }
+
+        .menu-laterale img {
+            display: block;
+            margin: 0 auto;
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .menu-laterale a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .content-wrapper {
+            position: absolute;
+            top: 40%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        @keyframes news-scroll {
+            from {
+                transform: translateX(100%); /* Inizia a destra */
+            }
+
+            to {
+                transform: translateX(-100%); /* Finisce a sinistra */
+            }
+        }
+
+        @keyframes news-text-scroll {
+            from {
+                transform: translateX(100%); /* Inizia a destra */
+            }
+
+            to {
+                transform: translateX(-100%); /* Finisce a sinistra */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar-wrapper"></div>
+    <div class="content-wrapper">
+        <!-- Immagine cliccabile al centro della pagina -->
+        <a class="collegamento-immagine" href="il_mio_PC.html">
+            <img src="https://winaero.com/blog/wp-content/uploads/2015/08/Display-icon.png" alt="Collegamento Pagina 1">
+        </a>
+    </div>
+
+    <div class="navbar-wrapper"></div>
+    <div class="navbar">
+        <div class="menu-button">Menu</div>
+        <div class="menu">
+            <a href="profilo_pubblico.html" class="menu-item">Public Profile</a>
+            <a href="about.html" class="menu-item">About the game</a>
+            <a href="library.html" class="menu-item">Library</a>
+            <a href="encyclopedia.html" class="menu-item">Encyclopedia</a>
+            <a href="Login.html" class="menu-item">Exit the game</a>
+        </div>
+        SCP Facility Management
+        <a class="profile-image" href="profilo_pubblico.html">
+            <img src="profile_image.php" alt="Immagine del Profilo">
+        </a>
+    </div>
+
+    <div class="news-bar">
+        <div class="news-container">
+            <div class="news-text-container">
+                Here's an example news. This text scrolls from right to left.
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="menu-laterale">
+            <img src="https://pa1.aminoapps.com/7845/691557da2f1b10e9e6ac2a287aae61bc51b5dbfer1-300-300_00.gif" alt="Menu Laterale">
+            <a href="Alchemy_Department.html">-Alchemy Department</a>
+            <a href="Antimemetics_Division.html">-Antimemetics Division</a>
+            <a href="Artificial_Intelligence_Applications_Division.html">-Artificial Intelligence Applications Division</a>
+            <a href="Cryptozoology_Division.html">-Cryptozoology Division</a>
+            <a href="Decommissioning_Department.html">-Decommissioning Department</a>
+            <a href="Emergent_Threat_Tactical_Response_Authority.html">-Emergent Threat Tactical Response Authority</a>
+            <a href="Fire_Suppression_Department.html">-Fire Suppression Department</a>
+            <a href="Department_of_Miscommunications.html">-Department of Miscommunications</a>
+            <a href="Department_of_Mythology and Folkloristics.html">-Department of Mythology and Folkloristics</a>
+            <a href="Pataphysics_Department.html">-Pataphysics Department</a>
+            <a href="Department_of_Procurement and Liquidation.html">-Department of Procurement and Liquidation</a>
+            <a href="Surrealistics_Department.html">-Surrealistics Department</a>
+            <a href="Department_of_Tactical_Theology.html">-Department of Tactical Theology</a>
+            <a href="Telecommunications_Monitoring_Office.html">-Telecommunications Monitoring Office</a>
+            <a href="Department_of_Deletions.html">-Department of Deletions</a>
+            <a href="Department_of_Abnormalities.html">-Department of Abnormalities</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a class="footer-link" href="chat.html">Chat</a>
+            <a class="footer-link" href="magazzino.html">Warehouse</a>
+            <a class="footer-link" href="contabilita.html">Accounting</a>
+        </div>
+    </div>
+</body>
+</html>
