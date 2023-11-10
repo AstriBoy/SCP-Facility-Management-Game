@@ -1,4 +1,4 @@
-**Game Title:** SCP Facility Management
+# **Game Title:** SCP Facility Management
 
 **Game Description:**
 
