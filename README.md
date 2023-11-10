@@ -28,7 +28,7 @@ SCP Facility Management offers a complete gaming experience, allowing you to imm
 # **Copyright Terms and Conditions**
 
 1. **Copyright**:
-    SCP Facility Management including its source code, art, music, text and all other content created and developed for the game, are the exclusive property of the undersigned (hereinafter referred to as "The Creator") and the SCP Foundation in self. The game is protected by applicable copyright laws and all related rights.
+    SCP Facility Management including its source code, art, and all other content (except SCP stories) created and developed for the game, are the exclusive property of the undersigned (hereinafter referred to as "The Creator") and the SCP Foundation in self. The game is protected by applicable copyright laws and all related rights.
 
 2. **Personal and Non-Commercial Use**:
     The game is intended for personal, non-commercial use only. Users have the right to install, play and enjoy the game for personal purposes, but are not authorized to sell, distribute or make money in any way from the game, its source code or its contents.
