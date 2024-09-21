@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat SCP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        .header {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .chat-list {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chat-item {
+            width: 250px;
+            padding: 10px;
+            background-color: #D3D3D3;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 5px 0;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: black;
+        }
+
+        .chat-item:hover {
+            background-color: #B0B0B0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Chat SCP</h1>
+    </div>
+
+    <div class="chat-list">
+        <a href="site_chat.html" target="pc-frame" class="chat-item">Chat del Sito</a>
+        <a href="administration_chat.html" target="pc-frame" class="chat-item">Chat Amministrazione</a>
+        <a href="security_chat.html" target="pc-frame" class="chat-item">Chat Sicurezza</a>
+        <a href="global_chat.html" target="pc-frame" class="chat-item">Chat Globale</a>
+        <a href="private_chat.html" target="pc-frame" class="chat-item">Chat Private</a>
+        <a href="internal_communications.html" target="pc-frame" class="chat-item">Comunicazioni Interne</a>
+    </div>
+
+</body>
+</html>

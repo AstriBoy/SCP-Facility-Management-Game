@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .navbar {
+            background-color: #333; /* Colore della barra superiore */
+            color: #fff; /* Colore del testo */
+            padding: 10px;
+            position: relative;
+            text-align: center; /* Centra il testo delle news orizzontalmente */
+        }
+
+        .menu-button {
+            position: absolute;
+            left: 20px; /* Posiziona il pulsante a sinistra a circa 20px dal bordo */
+            top: 10;
+            cursor: pointer;
+        }
+
+        .menu-button:hover + .menu,
+        .menu:hover {
+            display: block;
+            position: absolute;
+            top: 0;
+        }
+
+        .menu {
+            background-color: #fff; /* Colore di sfondo del menu a tendina */
+            display: none;
+            position: absolute;
+            top: 100%; /* Allineato sotto il pulsante */
+            left: 0;
+            z-index: 2; /* Imposta la profondità z per sovrapporlo alla barra delle notizie */
+        }
+
+        .menu-item {
+            padding: 10px;
+            text-decoration: none;
+            color: #333; /* Colore del testo del menu a tendina */
+            display: block;
+        }
+
+        .profile-image {
+            position: absolute;
+            right: 20px; /* Posiziona l'immagine a destra a circa 20px dal bordo */
+            top: 10px; /* Posizione verticale centrata */
+            cursor: pointer;
+        }
+
+        .profile-image img {
+            width: 20px; /* Larghezza dell'immagine del profilo */
+            height: 20px; /* Altezza dell'immagine del profilo */
+        }
+
+        .profile-link {
+            display: block;
+            position: absolute;
+            right: 20px; /* Posiziona il link a destra a circa 20px dal bordo */
+            top: 10px; /* Posizione verticale centrata */
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .library-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .footer {
+            background-color: #000; /* Colore del footer */
+            color: #fff;
+            height: 30px; /* Altezza del footer */
+            position: fixed; /* Ancora il footer in basso */
+            bottom: 0; /* Posiziona il footer in basso */
+            left: 0;
+            right: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .footer-link {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .library-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .library-item {
+            text-align: center;
+            margin: 10px;
+        }
+        
+        .library-item img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar-wrapper"></div>
+    <div class="navbar">
+        <div class="menu-button">Menu</div>
+        <div class="menu">
+            <a href="First_page.html" class="menu-item">Home</a>
+            <a href="profilo_pubblico.html" class="menu-item">Public Profile</a>
+            <a href="about.html" class="menu-item">About the game</a>
+            <a href="library.html" class="menu-item">Library</a>
+            <a href="encyclopedia.html" class="menu-item">Enciclopedia</a>
+            <a href="login.html" class="menu-item">Exit the game</a>
+        </div>
+        SCP Facility Management
+        <a class="profile-image" href="profilo_pubblico.html">
+            <img src="percorso_immagine_del_profilo.jpg" alt="Immagine del Profilo">
+        </a>
+        
+    </div>
+
+    <div class="content">
+        <h1>Library</h1>
+        <!-- Contenuto della libreria -->
+        <p>Contenuto della tua
+
+ libreria qui...</p>
+        <img class="library-image" src="C:\Users\1\OneDrive\Documenti\GitHub\SCP_Facility_Management_Game\SCP_Facility_Management_Game_v0.0.2-beta.1\img\raisa-logo.png" alt="Immagine Libro">
+    </div>
+
+    <div class="footer">
+        <div class="footer">
+        <div class="footer-links">
+            <a class="footer-link" href="chat.html">Chat</a>
+            <a class="footer-link" href="magazzino.html">Warehouse</a>
+            <a class="footer-link" href="contabilita.html">Accounting</a>
+        </div>
+    </div>
+</body>
+</html>

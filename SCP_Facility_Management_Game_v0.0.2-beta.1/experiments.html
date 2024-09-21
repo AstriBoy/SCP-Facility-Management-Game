@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esperimenti SCP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        .header {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .experiment-list {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .experiment-item {
+            width: 250px;
+            padding: 10px;
+            background-color: #D3D3D3;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 5px 0;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: black;
+        }
+
+        .experiment-item:hover {
+            background-color: #B0B0B0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Esperimenti SCP</h1>
+    </div>
+
+    <div class="experiment-list">
+        <a href="private_experiments.html" target="pc-frame" class="experiment-item">Esperimenti Privati</a>
+        <a href="site_experiments.html" target="pc-frame" class="experiment-item">Esperimenti del Sito</a>
+        <a href="global_experiments.html" target="pc-frame" class="experiment-item">Esperimenti Globali</a>
+        <a href="generic_experiments.html" target="pc-frame" class="experiment-item">Esperimenti Generici</a>
+    </div>
+
+</body>
+</html>

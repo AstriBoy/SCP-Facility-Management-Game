@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Game</title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("---");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: #333; /* Colore della barra superiore */
+            color: #fff; /* Colore del testo */
+            padding: 10px;
+            position: relative;
+            text-align: center; /* Centra il testo delle news orizzontalmente */
+        }
+
+        .menu-button {
+            position: absolute;
+            left: 20px; /* Posiziona il pulsante a sinistra a circa 20px dal bordo */
+            top: 10;
+            cursor: pointer;
+        }
+
+        .menu-button:hover + .menu,
+        .menu:hover {
+            display: block;
+            position: absolute;
+            top: 0;
+        }
+
+        .menu {
+            background-color: #fff; /* Colore di sfondo del menu a tendina */
+            display: none;
+            position: absolute;
+            top: 100%; /* Allineato sotto il pulsante */
+            left: 0;
+            z-index: 2; /* Imposta la profondità z per sovrapporlo alla barra delle notizie */
+        }
+
+        .menu-item {
+            padding: 10px;
+            text-decoration: none;
+            color: #333; /* Colore del testo del menu a tendina */
+            display: block;
+        }
+
+        .profile-image {
+            position: absolute;
+            right: 20px; /* Posiziona l'immagine a destra a circa 20px dal bordo */
+            top: 10px; /* Posizione verticale centrata */
+            cursor: pointer;
+        }
+
+        .profile-image img {
+            width: 20px; /* Larghezza dell'immagine del profilo */
+            height: 20px; /* Altezza dell'immagine del profilo */
+        }
+
+        .profile-link {
+            display: block;
+            position: absolute;
+            right: 20px; /* Posiziona il link a destra a circa 20px dal bordo */
+            top: 10px; /* Posizione verticale centrata */
+            cursor: pointer;
+        }
+
+        .news-bar {
+            background-color: #FFA500; /* Colore della barra delle notizie arancione */
+            color: #000; /* Colore del testo delle news */
+            padding: 10px;
+            text-align: center; /* Centra il testo delle news orizzontalmente */
+            z-index: 1; /* Imposta la profondità z per farlo apparire dietro il menu */
+        }
+
+        .news-text {
+            animation: news-scroll 60s linear infinite; /* Animazione delle news per 60 secondi */
+        }
+
+        .news-container {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-text-container {
+            display: inline-block;
+            white-space: nowrap;
+            animation: news-text-scroll 30s linear infinite;
+        }
+
+        .main-content {
+            /* Aggiungi regole di stile per il contenuto principale qui */
+        }
+
+        .collegamento-immagine {
+            position: absolute;
+        }
+
+        @keyframes news-scroll {
+            from {
+                transform: translateX(100%); /* Inizia a destra */
+            }
+
+            to {
+                transform: translateX(-100%); /* Finisce a sinistra */
+            }
+        }
+
+        @keyframes news-text-scroll {
+            from {
+                transform: translateX(100%); /* Inizia a destra */
+            }
+
+            to {
+                transform: translateX(-100%); /* Finisce a sinistra */
+            }
+        }
+        .about-content {
+            padding: 20px;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .decorative-box {
+            border: 2px solid #333; /* Cornice attorno alla casella di testo */
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar-wrapper"></div>
+    <div class="navbar">
+        <div class="menu-button">Menu</div>
+        <div class="menu">
+            <a href="First_page.html" class="menu-item">Home</a>
+            <a href="profilo_pubblico.html" class="menu-item">Public Profile</a>
+            <a href="about.html" class="menu-item">About the game</a>
+            <a href="library.html" class="menu-item">Library</a>
+            <a href="encyclopedia.html" class="menu-item">Encyclopedia</a>
+            <a href="login.html" class="menu-item">Exit the game</a>
+        </div>
+        SCP Facility Management
+        <a class="profile-image" href="profilo_pubblico.html">
+            <img src="profile_image.php" alt="Immagine del Profilo">
+        </a>
+    
+    </div>
+        <!-- Barra superiore, menu, immagine del profilo e bio -->
+        <a href="First_page.html" style="color: #fff; text-decoration: none;">SCP Facility Management</a>
+    </div>
+
+    <div class="about-content">
+        <h1>About the Game</h1>
+        <div class="about-text">
+            <!-- Inserisci qui la presentazione del gioco che desideri -->
+            SCP Facility Management is an engaging role-playing simulation game that immerses you in the secret and mysterious world of the SCP Foundation.
+As an administrator, researcher, security officer, or others at an SCP facility, you are responsible for managing, controlling, or researching the world's most dangerous anomalous objects. Your mission is to ensure that these entities remain safe, studied, and contained, while you seek to uncover the secrets behind them.
+
+Key Features
+SCP Facility Management: Manage an SCP facility, with several areas dedicated to containment and research on SCP objects. Make decisions in committees to decide the fate of the foundation, and rise in rank to increase your importance through experience.
+SCP Control: You can interact with the SCPs in your facility. Study them carefully, perform detailed experiments to discover their abilities and behaviors, and try to keep them safe from escapes or accidents. Trading with other players: Participate in the SCP Market, where you can trade SCP research and information with other players. Try to obtain rare or valuable items to upgrade your facility or sell them.
+Selling Research: By conducting detailed experiments and studies on SCPs, you can collect valuable data and discoveries. This data can be sold to other players or to the highest bidder, helping you fund further research and increase your rank.
+Capture and Retrieval Missions: Accept missions to capture new SCP objects around the world or to recapture those that have escaped from your facility. Each SCP has its own unique challenges and will require a strategic approach to capture or retrieve them safely. Be the best strategist and make sure everyone gets home safe and sound.
+Exploring the SCP Universe: Discover a vast universe of anomalous objects and creatures, each with its own history and peculiarities. Each SCP has the potential to represent a threat or a valuable resource.
+Challenges and Risks: Maintain a balance between scientific progress and the safety of the facility. Improper handling of SCPs can lead to disastrous consequences.
+SCP Facility Management offers a complete gaming experience, allowing you to immerse yourself in the rich world of SCP and test your management and strategy skills. Can you prove yourself to be a skilled Facility Administrator and an expert in managing anomalous objects? Prepare to find out as you explore the SCP universe and face unique challenges in this engaging community role-playing simulation game.
+        </div>
+
+        <div class="decorative-box">
+            <!-- Casella di testo con cornice decorativa -->
+            <p>The SCP Foundation and the Creator</p>
+        </div>
+    </div>
+</body>
+</html>

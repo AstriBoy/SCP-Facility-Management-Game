@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open First_page.html",
+            "file": "C:\\Users\\1\\OneDrive\\Documenti\\GitHub\\SCP_Facility_Management_Game\\SCP_Facility_Management_Game_v0.0.2-beta.1\\First_page.html"
+        }
+    ]
+}

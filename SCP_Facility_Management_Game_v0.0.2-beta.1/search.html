@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Research</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        .header {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .search-input {
+            width: 250px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid black;
+            font-size: 16px;
+        }
+
+        .search-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .search-item {
+            width: 250px;
+            padding: 10px;
+            background-color: #D3D3D3;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 5px 0;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: black;
+        }
+
+        .search-item:hover {
+            background-color: #B0B0B0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>SCP Research</h1>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search SCP..." oninput="filterSCPs()">
+    </div>
+
+    <div class="search-list" id="scpList">
+        <a href="scp_001.html" target="pc-frame" class="search-item">SCP-001</a>
+        <a href="scp_002.html" target="pc-frame" class="search-item">SCP-002</a>
+        <a href="scp_003.html" target="pc-frame" class="search-item">SCP-003</a>
+        <a href="scp_004.html" target="pc-frame" class="search-item">SCP-004</a>
+        <a href="scp_005.html" target="pc-frame" class="search-item">SCP-005</a>
+        <a href="scp_006.html" target="pc-frame" class="search-item">SCP-006</a>
+        <a href="scp_007.html" target="pc-frame" class="search-item">SCP-007</a>
+        <a href="scp_008.html" target="pc-frame" class="search-item">SCP-008</a>
+        <a href="scp_009.html" target="pc-frame" class="search-item">SCP-009</a>
+        <a href="scp_010.html" target="pc-frame" class="search-item">SCP-010</a>
+        <a href="scp_011.html" target="pc-frame" class="search-item">SCP-011</a>
+        <a href="scp_012.html" target="pc-frame" class="search-item">SCP-012</a>
+        <a href="scp_013.html" target="pc-frame" class="search-item">SCP-013</a>
+        <a href="scp_014.html" target="pc-frame" class="search-item">SCP-014</a>
+        <a href="scp_015.html" target="pc-frame" class="search-item">SCP-015</a>
+        <a href="scp_016.html" target="pc-frame" class="search-item">SCP-016</a>
+        <a href="scp_017.html" target="pc-frame" class="search-item">SCP-017</a>
+        <a href="scp_018.html" target="pc-frame" class="search-item">SCP-018</a>
+        <a href="scp_019.html" target="pc-frame" class="search-item">SCP-019</a>
+        <a href="scp_020.html" target="pc-frame" class="search-item">SCP-020</a>
+        <a href="scp_021.html" target="pc-frame" class="search-item">SCP-021</a>
+        <a href="scp_022.html" target="pc-frame" class="search-item">SCP-022</a>
+        <a href="scp_023.html" target="pc-frame" class="search-item">SCP-023</a>
+        <a href="scp_024.html" target="pc-frame" class="search-item">SCP-024</a>
+        <a href="scp_025.html" target="pc-frame" class="search-item">SCP-025</a>
+        <a href="scp_026.html" target="pc-frame" class="search-item">SCP-026</a>
+        <a href="scp_027.html" target="pc-frame" class="search-item">SCP-027</a>
+        <a href="scp_028.html" target="pc-frame" class="search-item">SCP-028</a>
+        <a href="scp_029.html" target="pc-frame" class="search-item">SCP-029</a>
+        <a href="scp_030.html" target="pc-frame" class="search-item">SCP-030</a>
+        <a href="scp_031.html" target="pc-frame" class="search-item">SCP-031</a>
+        <a href="scp_032.html" target="pc-frame" class="search-item">SCP-032</a>
+        <a href="scp_033.html" target="pc-frame" class="search-item">SCP-033</a>
+        <a href="scp_034.html" target="pc-frame" class="search-item">SCP-034</a>
+        <a href="scp_035.html" target="pc-frame" class="search-item">SCP-035</a>
+        <a href="scp_036.html" target="pc-frame" class="search-item">SCP-036</a>
+        <a href="scp_037.html" target="pc-frame" class="search-item">SCP-037</a>
+        <a href="scp_038.html" target="pc-frame" class="search-item">SCP-038</a>
+        <a href="scp_039.html" target="pc-frame" class="search-item">SCP-039</a>
+        <a href="scp_040.html" target="pc-frame" class="search-item">SCP-040</a>
+        <a href="scp_041.html" target="pc-frame" class="search-item">SCP-041</a>
+        <a href="scp_042.html" target="pc-frame" class="search-item">SCP-042</a>
+        <a href="scp_043.html" target="pc-frame" class="search-item">SCP-043</a>
+        <a href="scp_044.html" target="pc-frame" class="search-item">SCP-044</a>
+        <a href="scp_045.html" target="pc-frame" class="search-item">SCP-045</a>
+        <a href="scp_046.html" target="pc-frame" class="search-item">SCP-046</a>
+        <a href="scp_047.html" target="pc-frame" class="search-item">SCP-047</a>
+        <a href="scp_048.html" target="pc-frame" class="search-item">SCP-048</a>
+        <a href="scp_049.html" target="pc-frame" class="search-item">SCP-049</a>
+        <a href="scp_050.html" target="pc-frame" class="search-item">SCP-050</a>
+        <a href="scp_051.html" target="pc-frame" class="search-item">SCP-051</a>
+        <a href="scp_052.html" target="pc-frame" class="search-item">SCP-052</a>
+        <a href="scp_053.html" target="pc-frame" class="search-item">SCP-053</a>
+        <a href="scp_054.html" target="pc-frame" class="search-item">SCP-054</a>
+        <a href="scp_055.html" target="pc-frame" class="search-item">SCP-055</a>
+        <a href="scp_056.html" target="pc-frame" class="search-item">SCP-056</a>
+        <a href="scp_057.html" target="pc-frame" class="search-item">SCP-057</a>
+        <a href="scp_058.html" target="pc-frame" class="search-item">SCP-058</a>
+        <a href="scp_059.html" target="pc-frame" class="search-item">SCP-059</a>
+        <a href="scp_060.html" target="pc-frame" class="search-item">SCP-060</a>
+        <a href="scp_061.html" target="pc-frame" class="search-item">SCP-061</a>
+        <a href="scp_062.html" target="pc-frame" class="search-item">SCP-062</a>
+        <a href="scp_063.html" target="pc-frame" class="search-item">SCP-063</a>
+        <a href="scp_064.html" target="pc-frame" class="search-item">SCP-064</a>
+        <a href="scp_065.html" target="pc-frame" class="search-item">SCP-065</a>
+        <a href="scp_066.html" target="pc-frame" class="search-item">SCP-066</a>
+        <a href="scp_067.html" target="pc-frame" class="search-item">SCP-067</a>
+        <a href="scp_068.html" target="pc-frame" class="search-item">SCP-068</a>
+        <a href="scp_069.html" target="pc-frame" class="search-item">SCP-069</a>
+        <a href="scp_070.html" target="pc-frame" class="search-item">SCP-070</a>
+        <a href="scp_071.html" target="pc-frame" class="search-item">SCP-071</a>
+        <a href="scp_072.html" target="pc-frame" class="search-item">SCP-072</a>
+        <a href="scp_073.html" target="pc-frame" class="search-item">SCP-073</a>
+        <a href="scp_074.html" target="pc-frame" class="search-item">SCP-074</a>
+        <a href="scp_075.html" target="pc-frame" class="search-item">SCP-075</a>
+        <a href="scp_076.html" target="pc-frame" class="search-item">SCP-076</a>
+        <a href="scp_077.html" target="pc-frame" class="search-item">SCP-077</a>
+        <a href="scp_078.html" target="pc-frame" class="search-item">SCP-078</a>
+        <a href="scp_079.html" target="pc-frame" class="search-item">SCP-079</a>
+        <a href="scp_080.html" target="pc-frame" class="search-item">SCP-080</a>
+        <a href="scp_081.html" target="pc-frame" class="search-item">SCP-081</a>
+        <a href="scp_082.html" target="pc-frame" class="search-item">SCP-082</a>
+        <a href="scp_083.html" target="pc-frame" class="search-item">SCP-083</a>
+        <a href="scp_084.html" target="pc-frame" class="search-item">SCP-084</a>
+        <a href="scp_085.html" target="pc-frame" class="search-item">SCP-085</a>
+        <a href="scp_086.html" target="pc-frame" class="search-item">SCP-086</a>
+        <a href="scp_087.html" target="pc-frame" class="search-item">SCP-087</a>
+        <a href="scp_088.html" target="pc-frame" class="search-item">SCP-088</a>
+        <a href="scp_089.html" target="pc-frame" class="search-item">SCP-089</a>
+        <a href="scp_090.html" target="pc-frame" class="search-item">SCP-090</a>
+        <a href="scp_091.html" target="pc-frame" class="search-item">SCP-091</a>
+        <a href="scp_092.html" target="pc-frame" class="search-item">SCP-092</a>
+        <a href="scp_093.html" target="pc-frame" class="search-item">SCP-093</a>
+        <a href="scp_094.html" target="pc-frame" class="search-item">SCP-094</a>
+        <a href="scp_095.html" target="pc-frame" class="search-item">SCP-095</a>
+        <a href="scp_096.html" target="pc-frame" class="search-item">SCP-096</a>
+        <a href="scp_097.html" target="pc-frame" class="search-item">SCP-097</a>
+        <a href="scp_098.html" target="pc-frame" class="search-item">SCP-098</a>
+        <a href="scp_099.html" target="pc-frame" class="search-item">SCP-099</a>
+        <a href="scp_100.html" target="pc-frame" class="search-item">SCP-100</a>
+        <a href="scp_101.html" target="pc-frame" class="search-item">SCP-101</a>
+        <a href="scp_102.html" target="pc-frame" class="search-item">SCP-102</a>
+        <a href="scp_103.html" target="pc-frame" class="search-item">SCP-103</a>
+        <a href="scp_104.html" target="pc-frame" class="search-item">SCP-104</a>
+        <a href="scp_105.html" target="pc-frame" class="search-item">SCP-105</a>
+        <a href="scp_106.html" target="pc-frame" class="search-item">SCP-106</a>
+        <a href="scp_107.html" target="pc-frame" class="search-item">SCP-107</a>
+        <a href="scp_108.html" target="pc-frame" class="search-item">SCP-108</a>
+        <a href="scp_109.html" target="pc-frame" class="search-item">SCP-109</a>
+        <a href="scp_110.html" target="pc-frame" class="search-item">SCP-110</a>
+        <a href="scp_111.html" target="pc-frame" class="search-item">SCP-111</a>
+        <a href="scp_112.html" target="pc-frame" class="search-item">SCP-112</a>
+        <a href="scp_113.html" target="pc-frame" class="search-item">SCP-113</a>
+        <a href="scp_114.html" target="pc-frame" class="search-item">SCP-114</a>
+        <a href="scp_115.html" target="pc-frame" class="search-item">SCP-115</a>
+        <a href="scp_116.html" target="pc-frame" class="search-item">SCP-116</a>
+        <a href="scp_117.html" target="pc-frame" class="search-item">SCP-117</a>
+        <a href="scp_118.html" target="pc-frame" class="search-item">SCP-118</a>
+        <a href="scp_119.html" target="pc-frame" class="search-item">SCP-119</a>
+        <a href="scp_120.html" target="pc-frame" class="search-item">SCP-120</a>
+        <a href="scp_121.html" target="pc-frame" class="search-item">SCP-121</a>
+        <a href="scp_122.html" target="pc-frame" class="search-item">SCP-122</a>
+        <a href="scp_123.html" target="pc-frame" class="search-item">SCP-123</a>
+        <a href="scp_124.html" target="pc-frame" class="search-item">SCP-124</a>
+        <a href="scp_125.html" target="pc-frame" class="search-item">SCP-125</a>
+        <a href="scp_126.html" target="pc-frame" class="search-item">SCP-126</a>
+        <a href="scp_127.html" target="pc-frame" class="search-item">SCP-127</a>
+        <a href="scp_128.html" target="pc-frame" class="search-item">SCP-128</a>
+        <a href="scp_129.html" target="pc-frame" class="search-item">SCP-129</a>
+        <a href="scp_130.html" target="pc-frame" class="search-item">SCP-130</a>
+        <a href="scp_131.html" target="pc-frame" class="search-item">SCP-131</a>
+        <a href="scp_132.html" target="pc-frame" class="search-item">SCP-132</a>
+        <a href="scp_133.html" target="pc-frame" class="search-item">SCP-133</a>
+        <a href="scp_134.html" target="pc-frame" class="search-item">SCP-134</a>
+        <a href="scp_135.html" target="pc-frame" class="search-item">SCP-135</a>
+        <a href="scp_136.html" target="pc-frame" class="search-item">SCP-136</a>
+        <a href="scp_137.html" target="pc-frame" class="search-item">SCP-137</a>
+        <a href="scp_138.html" target="pc-frame" class="search-item">SCP-138</a>
+        <a href="scp_139.html" target="pc-frame" class="search-item">SCP-139</a>
+        <a href="scp_140.html" target="pc-frame" class="search-item">SCP-140</a>
+        <a href="scp_141.html" target="pc-frame" class="search-item">SCP-141</a>
+        <a href="scp_142.html" target="pc-frame" class="search-item">SCP-142</a>
+        <a href="scp_143.html" target="pc-frame" class="search-item">SCP-143</a>
+        <a href="scp_144.html" target="pc-frame" class="search-item">SCP-144</a>
+        <a href="scp_145.html" target="pc-frame" class="search-item">SCP-145</a>
+        <a href="scp_146.html" target="pc-frame" class="search-item">SCP-146</a>
+        <a href="scp_147.html" target="pc-frame" class="search-item">SCP-147</a>
+        <a href="scp_148.html" target="pc-frame" class="search-item">SCP-148</a>
+        <a href="scp_149.html" target="pc-frame" class="search-item">SCP-149</a>
+        <a href="scp_150.html" target="pc-frame" class="search-item">SCP-150</a>
+        <a href="scp_151.html" target="pc-frame" class="search-item">SCP-151</a>
+        <a href="scp_152.html" target="pc-frame" class="search-item">SCP-152</a>
+        <a href="scp_153.html" target="pc-frame" class="search-item">SCP-153</a>
+        <a href="scp_154.html" target="pc-frame" class="search-item">SCP-154</a>
+        <a href="scp_155.html" target="pc-frame" class="search-item">SCP-155</a>
+        <a href="scp_156.html" target="pc-frame" class="search-item">SCP-156</a>
+        <a href="scp_157.html" target="pc-frame" class="search-item">SCP-157</a>
+        <a href="scp_158.html" target="pc-frame" class="search-item">SCP-158</a>
+        <a href="scp_159.html" target="pc-frame" class="search-item">SCP-159</a>
+        <a href="scp_160.html" target="pc-frame" class="search-item">SCP-160</a>
+        <a href="scp_161.html" target="pc-frame" class="search-item">SCP-161</a>
+        <a href="scp_162.html" target="pc-frame" class="search-item">SCP-162</a>
+        <a href="scp_163.html" target="pc-frame" class="search-item">SCP-163</a>
+        <a href="scp_164.html" target="pc-frame" class="search-item">SCP-164</a>
+        <a href="scp_165.html" target="pc-frame" class="search-item">SCP-165</a>
+        <a href="scp_166.html" target="pc-frame" class="search-item">SCP-166</a>
+        <a href="scp_167.html" target="pc-frame" class="search-item">SCP-167</a>
+        <a href="scp_168.html" target="pc-frame" class="search-item">SCP-168</a>
+        <a href="scp_169.html" target="pc-frame" class="search-item">SCP-169</a>
+        <a href="scp_170.html" target="pc-frame" class="search-item">SCP-170</a>
+        <a href="scp_171.html" target="pc-frame" class="search-item">SCP-171</a>
+        <a href="scp_172.html" target="pc-frame" class="search-item">SCP-172</a>
+        <a href="scp_173.html" target="pc-frame" class="search-item">SCP-173</a>
+        <a href="scp_174.html" target="pc-frame" class="search-item">SCP-174</a>
+        <a href="scp_175.html" target="pc-frame" class="search-item">SCP-175</a>
+        <a href="scp_176.html" target="pc-frame" class="search-item">SCP-176</a>
+        <a href="scp_177.html" target="pc-frame" class="search-item">SCP-177</a>
+        <a href="scp_178.html" target="pc-frame" class="search-item">SCP-178</a>
+        <a href="scp_179.html" target="pc-frame" class="search-item">SCP-179</a>
+        <a href="scp_180.html" target="pc-frame" class="search-item">SCP-180</a>
+        <a href="scp_181.html" target="pc-frame" class="search-item">SCP-181</a>
+        <a href="scp_182.html" target="pc-frame" class="search-item">SCP-182</a>
+        <a href="scp_183.html" target="pc-frame" class="search-item">SCP-183</a>
+        <a href="scp_184.html" target="pc-frame" class="search-item">SCP-184</a>
+        <a href="scp_185.html" target="pc-frame" class="search-item">SCP-185</a>
+        <a href="scp_186.html" target="pc-frame" class="search-item">SCP-186</a>
+        <a href="scp_187.html" target="pc-frame" class="search-item">SCP-187</a>
+        <a href="scp_188.html" target="pc-frame" class="search-item">SCP-188</a>
+        <a href="scp_189.html" target="pc-frame" class="search-item">SCP-189</a>
+        <a href="scp_190.html" target="pc-frame" class="search-item">SCP-190</a>
+        <a href="scp_191.html" target="pc-frame" class="search-item">SCP-191</a>
+        <a href="scp_192.html" target="pc-frame" class="search-item">SCP-192</a>
+        <a href="scp_193.html" target="pc-frame" class="search-item">SCP-193</a>
+        <a href="scp_194.html" target="pc-frame" class="search-item">SCP-194</a>
+        <a href="scp_195.html" target="pc-frame" class="search-item">SCP-195</a>
+        <a href="scp_196.html" target="pc-frame" class="search-item">SCP-196</a>
+        <a href="scp_197.html" target="pc-frame" class="search-item">SCP-197</a>
+        <a href="scp_198.html" target="pc-frame" class="search-item">SCP-198</a>
+        <a href="scp_199.html" target="pc-frame" class="search-item">SCP-199</a>
+        <a href="scp_200.html" target="pc-frame" class="search-item">SCP-200</a>
+        <a href="scp_201.html" target="pc-frame" class="search-item">SCP-201</a>
+        <a href="scp_202.html" target="pc-frame" class="search-item">SCP-202</a>
+        <a href="scp_203.html" target="pc-frame" class="search-item">SCP-203</a>
+        <a href="scp_204.html" target="pc-frame" class="search-item">SCP-204</a>
+        <a href="scp_205.html" target="pc-frame" class="search-item">SCP-205</a>
+        <a href="scp_206.html" target="pc-frame" class="search-item">SCP-206</a>
+        <a href="scp_207.html" target="pc-frame" class="search-item">SCP-207</a>
+        <a href="scp_208.html" target="pc-frame" class="search-item">SCP-208</a>
+        <a href="scp_209.html" target="pc-frame" class="search-item">SCP-209</a>
+        <a href="scp_210.html" target="pc-frame" class="search-item">SCP-210</a>
+        <a href="scp_211.html" target="pc-frame" class="search-item">SCP-211</a>
+        <a href="scp_212.html" target="pc-frame" class="search-item">SCP-212</a>
+        <a href="scp_213.html" target="pc-frame" class="search-item">SCP-213</a>
+        <a href="scp_214.html" target="pc-frame" class="search-item">SCP-214</a>
+        <a href="scp_215.html" target="pc-frame" class="search-item">SCP-215</a>
+        <a href="scp_216.html" target="pc-frame" class="search-item">SCP-216</a>
+        <a href="scp_217.html" target="pc-frame" class="search-item">SCP-217</a>
+        <a href="scp_218.html" target="pc-frame" class="search-item">SCP-218</a>
+        <a href="scp_219.html" target="pc-frame" class="search-item">SCP-219</a>
+        <a href="scp_220.html" target="pc-frame" class="search-item">SCP-220</a>
+        <a href="scp_221.html" target="pc-frame" class="search-item">SCP-221</a>
+        <a href="scp_222.html" target="pc-frame" class="search-item">SCP-222</a>
+        <a href="scp_223.html" target="pc-frame" class="search-item">SCP-223</a>
+        <a href="scp_224.html" target="pc-frame" class="search-item">SCP-224</a>
+        <a href="scp_225.html" target="pc-frame" class="search-item">SCP-225</a>
+        <a href="scp_226.html" target="pc-frame" class="search-item">SCP-226</a>
+        <a href="scp_227.html" target="pc-frame" class="search-item">SCP-227</a>
+        <a href="scp_228.html" target="pc-frame" class="search-item">SCP-228</a>
+        <a href="scp_229.html" target="pc-frame" class="search-item">SCP-229</a>
+        <a href="scp_230.html" target="pc-frame" class="search-item">SCP-230</a>
+        <a href="scp_231.html" target="pc-frame" class="search-item">SCP-231</a>
+        <a href="scp_232.html" target="pc-frame" class="search-item">SCP-232</a>
+        <a href="scp_233.html" target="pc-frame" class="search-item">SCP-233</a>
+        <a href="scp_234.html" target="pc-frame" class="search-item">SCP-234</a>
+        <a href="scp_235.html" target="pc-frame" class="search-item">SCP-235</a>
+        <a href="scp_236.html" target="pc-frame" class="search-item">SCP-236</a>
+        <a href="scp_237.html" target="pc-frame" class="search-item">SCP-237</a>
+        <a href="scp_238.html" target="pc-frame" class="search-item">SCP-238</a>
+        <a href="scp_239.html" target="pc-frame" class="search-item">SCP-239</a>
+        <a href="scp_240.html" target="pc-frame" class="search-item">SCP-240</a>
+        <a href="scp_241.html" target="pc-frame" class="search-item">SCP-241</a>
+        <a href="scp_242.html" target="pc-frame" class="search-item">SCP-242</a>
+        <a href="scp_243.html" target="pc-frame" class="search-item">SCP-243</a>
+        <a href="scp_244.html" target="pc-frame" class="search-item">SCP-244</a>
+        <a href="scp_245.html" target="pc-frame" class="search-item">SCP-245</a>
+        <a href="scp_246.html" target="pc-frame" class="search-item">SCP-246</a>
+        <a href="scp_247.html" target="pc-frame" class="search-item">SCP-247</a>
+        <a href="scp_248.html" target="pc-frame" class="search-item">SCP-248</a>
+        <a href="scp_249.html" target="pc-frame" class="search-item">SCP-249</a>
+        <a href="scp_250.html" target="pc-frame" class="search-item">SCP-250</a>
+        <a href="scp_251.html" target="pc-frame" class="search-item">SCP-251</a>
+        <a href="scp_252.html" target="pc-frame" class="search-item">SCP-252</a>
+        <a href="scp_253.html" target="pc-frame" class="search-item">SCP-253</a>
+        <a href="scp_254.html" target="pc-frame" class="search-item">SCP-254</a>
+        <a href="scp_255.html" target="pc-frame" class="search-item">SCP-255</a>
+        <a href="scp_256.html" target="pc-frame" class="search-item">SCP-256</a>
+        <a href="scp_257.html" target="pc-frame" class="search-item">SCP-257</a>
+        <a href="scp_258.html" target="pc-frame" class="search-item">SCP-258</a>
+        <a href="scp_259.html" target="pc-frame" class="search-item">SCP-259</a>
+        <a href="scp_260.html" target="pc-frame" class="search-item">SCP-260</a>
+        <a href="scp_261.html" target="pc-frame" class="search-item">SCP-261</a>
+        <a href="scp_262.html" target="pc-frame" class="search-item">SCP-262</a>
+        <a href="scp_263.html" target="pc-frame" class="search-item">SCP-263</a>
+        <a href="scp_264.html" target="pc-frame" class="search-item">SCP-264</a>
+        <a href="scp_265.html" target="pc-frame" class="search-item">SCP-265</a>
+        <a href="scp_266.html" target="pc-frame" class="search-item">SCP-266</a>
+        <a href="scp_267.html" target="pc-frame" class="search-item">SCP-267</a>
+        <a href="scp_268.html" target="pc-frame" class="search-item">SCP-268</a>
+        <a href="scp_269.html" target="pc-frame" class="search-item">SCP-269</a>
+        <a href="scp_270.html" target="pc-frame" class="search-item">SCP-270</a>
+        <a href="scp_271.html" target="pc-frame" class="search-item">SCP-271</a>
+        <a href="scp_272.html" target="pc-frame" class="search-item">SCP-272</a>
+        <a href="scp_273.html" target="pc-frame" class="search-item">SCP-273</a>
+        <a href="scp_274.html" target="pc-frame" class="search-item">SCP-274</a>
+        <a href="scp_275.html" target="pc-frame" class="search-item">SCP-275</a>
+        <a href="scp_276.html" target="pc-frame" class="search-item">SCP-276</a>
+        <a href="scp_277.html" target="pc-frame" class="search-item">SCP-277</a>
+        <a href="scp_278.html" target="pc-frame" class="search-item">SCP-278</a>
+        <a href="scp_279.html" target="pc-frame" class="search-item">SCP-279</a>
+        <a href="scp_280.html" target="pc-frame" class="search-item">SCP-280</a>
+        <a href="scp_281.html" target="pc-frame" class="search-item">SCP-281</a>
+        <a href="scp_282.html" target="pc-frame" class="search-item">SCP-282</a>
+        <a href="scp_283.html" target="pc-frame" class="search-item">SCP-283</a>
+        <a href="scp_284.html" target="pc-frame" class="search-item">SCP-284</a>
+        <a href="scp_285.html" target="pc-frame" class="search-item">SCP-285</a>
+        <a href="scp_286.html" target="pc-frame" class="search-item">SCP-286</a>
+        <a href="scp_287.html" target="pc-frame" class="search-item">SCP-287</a>
+        <a href="scp_288.html" target="pc-frame" class="search-item">SCP-288</a>
+        <a href="scp_289.html" target="pc-frame" class="search-item">SCP-289</a>
+        <a href="scp_290.html" target="pc-frame" class="search-item">SCP-290</a>
+        <a href="scp_291.html" target="pc-frame" class="search-item">SCP-291</a>
+        <a href="scp_292.html" target="pc-frame" class="search-item">SCP-292</a>
+        <a href="scp_293.html" target="pc-frame" class="search-item">SCP-293</a>
+        <a href="scp_294.html" target="pc-frame" class="search-item">SCP-294</a>
+        <a href="scp_295.html" target="pc-frame" class="search-item">SCP-295</a>
+        <a href="scp_296.html" target="pc-frame" class="search-item">SCP-296</a>
+        <a href="scp_297.html" target="pc-frame" class="search-item">SCP-297</a>
+        <a href="scp_298.html" target="pc-frame" class="search-item">SCP-298</a>
+        <a href="scp_299.html" target="pc-frame" class="search-item">SCP-299</a>
+        <a href="scp_300.html" target="pc-frame" class="search-item">SCP-300</a>
+        <a href="scp_301.html" target="pc-frame" class="search-item">SCP-301</a>
+        <a href="scp_302.html" target="pc-frame" class="search-item">SCP-302</a>
+        <a href="scp_303.html" target="pc-frame" class="search-item">SCP-303</a>
+        <a href="scp_304.html" target="pc-frame" class="search-item">SCP-304</a>
+        <a href="scp_305.html" target="pc-frame" class="search-item">SCP-305</a>
+        <a href="scp_306.html" target="pc-frame" class="search-item">SCP-306</a>
+        <a href="scp_307.html" target="pc-frame" class="search-item">SCP-307</a>
+        <a href="scp_308.html" target="pc-frame" class="search-item">SCP-308</a>
+        <a href="scp_309.html" target="pc-frame" class="search-item">SCP-309</a>
+        <a href="scp_310.html" target="pc-frame" class="search-item">SCP-310</a>
+        <a href="scp_311.html" target="pc-frame" class="search-item">SCP-311</a>
+        <a href="scp_312.html" target="pc-frame" class="search-item">SCP-312</a>
+        <a href="scp_313.html" target="pc-frame" class="search-item">SCP-313</a>
+        <a href="scp_314.html" target="pc-frame" class="search-item">SCP-314</a>
+        <a href="scp_315.html" target="pc-frame" class="search-item">SCP-315</a>
+        <a href="scp_316.html" target="pc-frame" class="search-item">SCP-316</a>
+        <a href="scp_317.html" target="pc-frame" class="search-item">SCP-317</a>
+        <a href="scp_318.html" target="pc-frame" class="search-item">SCP-318</a>
+        <a href="scp_319.html" target="pc-frame" class="search-item">SCP-319</a>
+        <a href="scp_320.html" target="pc-frame" class="search-item">SCP-320</a>
+        <a href="scp_321.html" target="pc-frame" class="search-item">SCP-321</a>
+        <a href="scp_322.html" target="pc-frame" class="search-item">SCP-322</a>
+        <a href="scp_323.html" target="pc-frame" class="search-item">SCP-323</a>
+        <a href="scp_324.html" target="pc-frame" class="search-item">SCP-324</a>
+        <a href="scp_325.html" target="pc-frame" class="search-item">SCP-325</a>
+        <a href="scp_326.html" target="pc-frame" class="search-item">SCP-326</a>
+        <a href="scp_327.html" target="pc-frame" class="search-item">SCP-327</a>
+        <a href="scp_328.html" target="pc-frame" class="search-item">SCP-328</a>
+        <a href="scp_329.html" target="pc-frame" class="search-item">SCP-329</a>
+        <a href="scp_330.html" target="pc-frame" class="search-item">SCP-330</a>
+        <a href="scp_331.html" target="pc-frame" class="search-item">SCP-331</a>
+        <a href="scp_332.html" target="pc-frame" class="search-item">SCP-332</a>
+        <a href="scp_333.html" target="pc-frame" class="search-item">SCP-333</a>
+        <a href="scp_334.html" target="pc-frame" class="search-item">SCP-334</a>
+        <a href="scp_335.html" target="pc-frame" class="search-item">SCP-335</a>
+        <a href="scp_336.html" target="pc-frame" class="search-item">SCP-336</a>
+        <a href="scp_337.html" target="pc-frame" class="search-item">SCP-337</a>
+        <a href="scp_338.html" target="pc-frame" class="search-item">SCP-338</a>
+        <a href="scp_339.html" target="pc-frame" class="search-item">SCP-339</a>
+        <a href="scp_340.html" target="pc-frame" class="search-item">SCP-340</a>
+        <a href="scp_341.html" target="pc-frame" class="search-item">SCP-341</a>
+        <a href="scp_342.html" target="pc-frame" class="search-item">SCP-342</a>
+        <a href="scp_343.html" target="pc-frame" class="search-item">SCP-343</a>
+        <a href="scp_344.html" target="pc-frame" class="search-item">SCP-344</a>
+        <a href="scp_345.html" target="pc-frame" class="search-item">SCP-345</a>
+        <a href="scp_346.html" target="pc-frame" class="search-item">SCP-346</a>
+        <a href="scp_347.html" target="pc-frame" class="search-item">SCP-347</a>
+        <a href="scp_348.html" target="pc-frame" class="search-item">SCP-348</a>
+        <a href="scp_349.html" target="pc-frame" class="search-item">SCP-349</a>
+        <a href="scp_350.html" target="pc-frame" class="search-item">SCP-350</a>
+        <a href="scp_351.html" target="pc-frame" class="search-item">SCP-351</a>
+        <a href="scp_352.html" target="pc-frame" class="search-item">SCP-352</a>
+        <a href="scp_353.html" target="pc-frame" class="search-item">SCP-353</a>
+        <a href="scp_354.html" target="pc-frame" class="search-item">SCP-354</a>
+        <a href="scp_355.html" target="pc-frame" class="search-item">SCP-355</a>
+        <a href="scp_356.html" target="pc-frame" class="search-item">SCP-356</a>
+        <a href="scp_357.html" target="pc-frame" class="search-item">SCP-357</a>
+        <a href="scp_358.html" target="pc-frame" class="search-item">SCP-358</a>
+        <a href="scp_359.html" target="pc-frame" class="search-item">SCP-359</a>
+        <a href="scp_360.html" target="pc-frame" class="search-item">SCP-360</a>
+        <a href="scp_361.html" target="pc-frame" class="search-item">SCP-361</a>
+        <a href="scp_362.html" target="pc-frame" class="search-item">SCP-362</a>
+        <a href="scp_363.html" target="pc-frame" class="search-item">SCP-363</a>
+        <a href="scp_364.html" target="pc-frame" class="search-item">SCP-364</a>
+        <a href="scp_365.html" target="pc-frame" class="search-item">SCP-365</a>
+        <a href="scp_366.html" target="pc-frame" class="search-item">SCP-366</a>
+        <a href="scp_367.html" target="pc-frame" class="search-item">SCP-367</a>
+        <a href="scp_368.html" target="pc-frame" class="search-item">SCP-368</a>
+        <a href="scp_369.html" target="pc-frame" class="search-item">SCP-369</a>
+        <a href="scp_370.html" target="pc-frame" class="search-item">SCP-370</a>
+        <a href="scp_371.html" target="pc-frame" class="search-item">SCP-371</a>
+        <a href="scp_372.html" target="pc-frame" class="search-item">SCP-372</a>
+        <a href="scp_373.html" target="pc-frame" class="search-item">SCP-373</a>
+        <a href="scp_374.html" target="pc-frame" class="search-item">SCP-374</a>
+        <a href="scp_375.html" target="pc-frame" class="search-item">SCP-375</a>
+        <a href="scp_376.html" target="pc-frame" class="search-item">SCP-376</a>
+        <a href="scp_377.html" target="pc-frame" class="search-item">SCP-377</a>
+        <a href="scp_378.html" target="pc-frame" class="search-item">SCP-378</a>
+        <a href="scp_379.html" target="pc-frame" class="search-item">SCP-379</a>
+        <a href="scp_380.html" target="pc-frame" class="search-item">SCP-380</a>
+        <a href="scp_381.html" target="pc-frame" class="search-item">SCP-381</a>
+        <a href="scp_382.html" target="pc-frame" class="search-item">SCP-382</a>
+        <a href="scp_383.html" target="pc-frame" class="search-item">SCP-383</a>
+        <a href="scp_384.html" target="pc-frame" class="search-item">SCP-384</a>
+        <a href="scp_385.html" target="pc-frame" class="search-item">SCP-385</a>
+        <a href="scp_386.html" target="pc-frame" class="search-item">SCP-386</a>
+        <a href="scp_387.html" target="pc-frame" class="search-item">SCP-387</a>
+        <a href="scp_388.html" target="pc-frame" class="search-item">SCP-388</a>
+        <a href="scp_389.html" target="pc-frame" class="search-item">SCP-389</a>
+        <a href="scp_390.html" target="pc-frame" class="search-item">SCP-390</a>
+        <a href="scp_391.html" target="pc-frame" class="search-item">SCP-391</a>
+        <a href="scp_392.html" target="pc-frame" class="search-item">SCP-392</a>
+        <a href="scp_393.html" target="pc-frame" class="search-item">SCP-393</a>
+        <a href="scp_394.html" target="pc-frame" class="search-item">SCP-394</a>
+        <a href="scp_395.html" target="pc-frame" class="search-item">SCP-395</a>
+        <a href="scp_396.html" target="pc-frame" class="search-item">SCP-396</a>
+        <a href="scp_397.html" target="pc-frame" class="search-item">SCP-397</a>
+        <a href="scp_398.html" target="pc-frame" class="search-item">SCP-398</a>
+        <a href="scp_399.html" target="pc-frame" class="search-item">SCP-399</a>
+        <a href="scp_400.html" target="pc-frame" class="search-item">SCP-400</a>
+        <a href="scp_401.html" target="pc-frame" class="search-item">SCP-401</a>
+        <a href="scp_402.html" target="pc-frame" class="search-item">SCP-402</a>
+        <a href="scp_403.html" target="pc-frame" class="search-item">SCP-403</a>
+        <a href="scp_404.html" target="pc-frame" class="search-item">SCP-404</a>
+        <a href="scp_405.html" target="pc-frame" class="search-item">SCP-405</a>
+        <a href="scp_406.html" target="pc-frame" class="search-item">SCP-406</a>
+        <a href="scp_407.html" target="pc-frame" class="search-item">SCP-407</a>
+        <a href="scp_408.html" target="pc-frame" class="search-item">SCP-408</a>
+        <a href="scp_409.html" target="pc-frame" class="search-item">SCP-409</a>
+        <a href="scp_410.html" target="pc-frame" class="search-item">SCP-410</a>
+        <a href="scp_411.html" target="pc-frame" class="search-item">SCP-411</a>
+        <a href="scp_412.html" target="pc-frame" class="search-item">SCP-412</a>
+        <a href="scp_413.html" target="pc-frame" class="search-item">SCP-413</a>
+        <a href="scp_414.html" target="pc-frame" class="search-item">SCP-414</a>
+        <a href="scp_415.html" target="pc-frame" class="search-item">SCP-415</a>
+        <a href="scp_416.html" target="pc-frame" class="search-item">SCP-416</a>
+        <a href="scp_417.html" target="pc-frame" class="search-item">SCP-417</a>
+        <a href="scp_418.html" target="pc-frame" class="search-item">SCP-418</a>
+        <a href="scp_419.html" target="pc-frame" class="search-item">SCP-419</a>
+        <a href="scp_420.html" target="pc-frame" class="search-item">SCP-420</a>
+        <a href="scp_421.html" target="pc-frame" class="search-item">SCP-421</a>
+        <a href="scp_422.html" target="pc-frame" class="search-item">SCP-422</a>
+        <a href="scp_423.html" target="pc-frame" class="search-item">SCP-423</a>
+        <a href="scp_424.html" target="pc-frame" class="search-item">SCP-424</a>
+        <a href="scp_425.html" target="pc-frame" class="search-item">SCP-425</a>
+        <a href="scp_426.html" target="pc-frame" class="search-item">SCP-426</a>
+        <a href="scp_427.html" target="pc-frame" class="search-item">SCP-427</a>
+        <a href="scp_428.html" target="pc-frame" class="search-item">SCP-428</a>
+        <a href="scp_429.html" target="pc-frame" class="search-item">SCP-429</a>
+        <a href="scp_430.html" target="pc-frame" class="search-item">SCP-430</a>
+        <a href="scp_431.html" target="pc-frame" class="search-item">SCP-431</a>
+        <a href="scp_432.html" target="pc-frame" class="search-item">SCP-432</a>
+        <a href="scp_433.html" target="pc-frame" class="search-item">SCP-433</a>
+        <a href="scp_434.html" target="pc-frame" class="search-item">SCP-434</a>
+        <a href="scp_435.html" target="pc-frame" class="search-item">SCP-435</a>
+        <a href="scp_436.html" target="pc-frame" class="search-item">SCP-436</a>
+        <a href="scp_437.html" target="pc-frame" class="search-item">SCP-437</a>
+        <a href="scp_438.html" target="pc-frame" class="search-item">SCP-438</a>
+        <a href="scp_439.html" target="pc-frame" class="search-item">SCP-439</a>
+        <a href="scp_440.html" target="pc-frame" class="search-item">SCP-440</a>
+        <a href="scp_441.html" target="pc-frame" class="search-item">SCP-441</a>
+        <a href="scp_442.html" target="pc-frame" class="search-item">SCP-442</a>
+        <a href="scp_443.html" target="pc-frame" class="search-item">SCP-443</a>
+        <a href="scp_444.html" target="pc-frame" class="search-item">SCP-444</a>
+        <a href="scp_445.html" target="pc-frame" class="search-item">SCP-445</a>
+        <a href="scp_446.html" target="pc-frame" class="search-item">SCP-446</a>
+        <a href="scp_447.html" target="pc-frame" class="search-item">SCP-447</a>
+        <a href="scp_448.html" target="pc-frame" class="search-item">SCP-448</a>
+        <a href="scp_449.html" target="pc-frame" class="search-item">SCP-449</a>
+
+
+
+
+        <!-- Aggiungi altri SCP qui -->
+    </div>
+
+    <iframe name="pc-frame"></iframe>
+
+    <script>
+        function filterSCPs() {
+            const input = document.querySelector('.search-input');
+            const filter = input.value.toLowerCase();
+            const scpList = document.getElementById('scpList');
+            const items = scpList.getElementsByClassName('search-item');
+
+            for (let i = 0; i < items.length; i++) {
+                const txtValue = items[i].textContent || items[i].innerText;
+                items[i].style.display = txtValue.toLowerCase().includes(filter) ? '' : 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

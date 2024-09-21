@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embembed_pc</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://us.v-cdn.net/6036147/uploads/I96REDZEDBSX/l-03-5-1-1200x675.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            justify-items: center;
+            text-align: center;
+        }
+
+        .menu-item {
+            width: 120px;
+            height: 120px;
+            background-color: #D3D3D3;
+            border-radius: 20px;
+            border: 3px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #B0B0B0;
+            transform: scale(1.1);
+        }
+
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+
+        .icon-label {
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        /* Stile per il frame */
+        iframe {
+            width: 80%;
+            height: 400vh;
+            border: none;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+
+        .department-list {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .department-item {
+            width: 250px;
+            padding: 10px;
+            background-color: #D3D3D3;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 5px 0;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: black;
+        }
+
+        .department-item:hover {
+            background-color: #B0B0B0;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="icon-grid">
+            <!-- Icona Ricerca -->
+            <a href="#research" onclick="loadPage('search.html')">
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon">
+                    <div class="icon-label">Research</div>
+                </div>
+            </a>
+
+            <!-- Icona Amministrazione -->
+            <a href="#administration" onclick="loadPage('administration.html')">
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2679/2679733.png" alt="Administration Icon">
+                    <div class="icon-label">Administration</div>
+                </div>
+            </a>
+
+            <!-- Icona Chat -->
+            <a href="#chat" onclick="loadPage('chat.html')">
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="Chat Icon">
+                    <div class="icon-label">Chat</div>
+                </div>
+            </a>
+
+            <!-- Icona Esperimenti -->
+            <a href="#experiments" onclick="loadPage('experiments.html')">
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/411/411763.png" alt="Experiments Icon">
+                    <div class="icon-label">Experiments</div>
+                </div>
+            </a>
+
+            <!-- Icona Dipartimenti -->
+            <a href="#departments" onclick="loadPage('departments.html')">
+                <div class="menu-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2555/2555091.png" alt="Departments Icon">
+                    <div class="icon-label">Departments</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Frame per contenuto embeddato -->
+    <iframe id="pc-frame" src=""></iframe>
+
+    <script>
+        function loadPage(page) {
+            document.getElementById('pc-frame').src = page;
+        }
+    </script>
+</body>
+</html>
