@@ -1,10 +1,16 @@
-# **Game Title:** SCP Facility Management
+# **SCP Facility Management**
 
-**Game Description:**
+## **Join the Team - We're in Beta!**
+
+The project is currently in its first beta phase, and we are actively looking for passionate programmers to join us in building something truly unique. The idea behind this game is complex and ambitious, so we are searching for many developers who can contribute to this large-scale project. If you're excited about SCP lore and have a passion for coding, we'd love to have you on board! Whether you're an experienced developer or just starting out, your skills and dedication can help bring this project to life. Let's create something amazing together!
+
+---
+
+## **Game Description:**
 
 SCP Foundation: Facility Tycoon is an addictive tycoon simulation game that immerses you in the secret and mysterious world of the SCP Foundation. In the role of an administrator of an SCP Facility, you will be responsible for managing and controlling the world's most dangerous anomalous objects. Your mission is to ensure that these entities remain safe, studied, and contained, while you seek to uncover the secrets behind them.
 
-**Main features:**
+## **Main Features:**
 
 1. **SCP Facility Management:** Build and manage your own SCP Facility, with several areas dedicated to containment and research on SCP objects. Customize your facility to maximize efficiency and safety.
 
@@ -22,22 +28,22 @@ SCP Foundation: Facility Tycoon is an addictive tycoon simulation game that imme
 
 SCP Facility Management offers a complete gaming experience, allowing you to immerse yourself in the rich world of SCP and testing your management and strategy skills. Will you be able to prove yourself as a skilled Facility administrator and an expert in handling anomalous objects? Get ready to find out as you explore the SCP Universe and face unique challenges in this addictive tycoon simulation game.
 
+---
 
-
-
-# **Copyright Terms and Conditions**
+## **Copyright Terms and Conditions**
 
 1. **Copyright**:
-    SCP Facility Management including its source code, art, and all other content (except SCP stories) created and developed for the game, are the exclusive property of the undersigned (hereinafter referred to as "The Creator") and the SCP Foundation in self. The game is protected by applicable copyright laws and all related rights.
+    SCP Facility Management including its source code, art, and all other content (except SCP stories) created and developed for the game, are the exclusive property of the undersigned (hereinafter referred to as "The Creator") and the SCP Foundation in itself. The game is protected by applicable copyright laws and all related rights.
 
 2. **Personal and Non-Commercial Use**:
-    The game is intended for personal, non-commercial use only. Users have the right to install, play and enjoy the game for personal purposes, but are not authorized to sell, distribute or make money in any way from the game, its source code or its contents.
+    The game is intended for personal, non-commercial use only. Users have the right to install, play and enjoy the game for personal purposes, but are not authorized to sell, distribute or make money in any way from the game, its source code, or its contents.
 
 3. **Copyright Violations**:
     The Creator reserves the right to take legal action against anyone who violates the copyright terms set forth above. This may result in legal action for damages and losses resulting from such violations.
 
 4. **Communication and Authorization Requests**:
-    Any request for permission for use other than that permitted in these terms and conditions must be made in writing to the Creator. The Creator reserves the right to grant or deny such permission in its sole discretion.
+    Any request for permission for use other than that permitted in these terms and conditions must be made in writing to the Creator. The Creator reserves the right to grant or deny such permission at its sole discretion.
+
 
 5. **Changes to the Copyright Terms and Conditions**:
     The Creator reserves the right to make changes to these Copyright Terms and Conditions at any time. Users are responsible for regularly checking for changes and accepting them.
