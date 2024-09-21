@@ -6,6 +6,33 @@ The project is currently in its first beta phase, and we are actively looking fo
 
 ---
 
+## **Beta Update 0.0.2 - Interface Overhaul & Administration/Research Dynamics**
+
+### **What's New in Beta 0.0.2:**
+
+1. **Home Interface Redesign:**
+   - The home screen has undergone a significant UI overhaul to enhance user experience and streamline navigation.
+   - New layout improves accessibility to key functions such as containment management, research, and facility upgrades.
+   - Visual updates provide a cleaner, more modern look, with improved responsiveness and better organization of information.
+
+2. **Introduction of Administration Dynamics:**
+   - Early implementation of **Facility Administration** has been added, allowing players to begin managing operational resources and personnel assignments.
+   - Players can now appoint key administrative staff, balance resource allocation, and monitor overall facility efficiency.
+   - Initial stages of decision-making processes have been introduced, laying the groundwork for more complex management systems in future updates.
+
+3. **Research System (Phase 1):**
+   - The foundations of the **SCP Research System** are now live, enabling players to start conducting basic research on contained SCPs.
+   - You can assign researchers to SCP objects, initiating early experiments that will yield valuable data and insights.
+   - Players can now gather research points, which will become essential for unlocking more advanced studies and upgrades in the future.
+
+### **Coming Soon:**
+- Deeper **research tree development**, including new technologies and advanced experimentation options.
+- Expansion of the **Administration mechanics**, focusing on staff management, facility expansion, and emergency protocols.
+
+We’re excited to get feedback from players and contributors on these early systems as we continue to refine and expand the game!
+
+---
+
 ## **Game Description:**
 
 SCP Foundation: Facility Tycoon is an addictive tycoon simulation game that immerses you in the secret and mysterious world of the SCP Foundation. In the role of an administrator of an SCP Facility, you will be responsible for managing and controlling the world's most dangerous anomalous objects. Your mission is to ensure that these entities remain safe, studied, and contained, while you seek to uncover the secrets behind them.
